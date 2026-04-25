@@ -24,6 +24,7 @@ export const ScrapbookCard = ({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       whileHover={{ y: -5, transition: { duration: 0.2 } }}
+      onClick={onClick}
       className={cn(
         "scrapbook-card p-6 border-4 border-black relative",
         hasTape && "tape-effect",
