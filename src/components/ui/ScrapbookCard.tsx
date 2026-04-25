@@ -6,13 +6,15 @@ interface ScrapbookCardProps {
   className?: string;
   tilt?: "left" | "right" | "none";
   hasTape?: boolean;
+  onClick?: () => void;
 }
 
 export const ScrapbookCard = ({ 
   children, 
   className, 
   tilt = "none",
-  hasTape = false 
+  hasTape = false,
+  onClick
 }: ScrapbookCardProps) => {
   const tiltClass = tilt === "left" ? "tilt-left" : tilt === "right" ? "tilt-right" : "";
 

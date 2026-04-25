@@ -1,7 +1,14 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ScrapbookCard } from "./ui/ScrapbookCard";
 import { Play, Pause, SkipBack, SkipForward, Shuffle, Repeat, Music } from "lucide-react";
+
+declare global {
+  interface Window {
+    YT: any;
+    onYouTubeIframeAPIReady: () => void;
+  }
+}
 
 export const MusicSection = () => {
   const songs = [
