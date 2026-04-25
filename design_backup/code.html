@@ -1,0 +1,419 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>MAHAKVERSE | Stay Dramatic</title>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;800;900&amp;family=Plus+Jakarta+Sans:wght@500;700&amp;family=Be+Vietnam+Pro:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "background": "#fff8f8",
+                    "on-secondary-container": "#006e70",
+                    "primary": "#b40065",
+                    "outline-variant": "#e3bdc7",
+                    "surface-variant": "#fadbe3",
+                    "error": "#ba1a1a",
+                    "inverse-surface": "#3e2b31",
+                    "on-error": "#ffffff",
+                    "surface": "#fff8f8",
+                    "on-tertiary-container": "#fefcff",
+                    "primary-fixed": "#ffd9e3",
+                    "on-primary-fixed": "#3e001f",
+                    "on-primary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-secondary-fixed": "#002020",
+                    "surface-container": "#ffe8ed",
+                    "on-surface-variant": "#5b3f48",
+                    "surface-container-low": "#fff0f3",
+                    "tertiary-fixed-dim": "#a5c8ff",
+                    "on-tertiary": "#ffffff",
+                    "primary-fixed-dim": "#ffb0ca",
+                    "outline": "#8f6e78",
+                    "inverse-on-surface": "#ffecf0",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-tint": "#b90068",
+                    "on-secondary": "#ffffff",
+                    "secondary-fixed": "#5af8fb",
+                    "secondary-container": "#56f5f8",
+                    "on-primary-container": "#fffbff",
+                    "on-secondary-fixed-variant": "#004f51",
+                    "on-surface": "#28171c",
+                    "tertiary": "#005cab",
+                    "secondary-fixed-dim": "#2ddbde",
+                    "secondary": "#00696b",
+                    "surface-dim": "#f1d2da",
+                    "tertiary-fixed": "#d4e3ff",
+                    "on-tertiary-fixed": "#001c3a",
+                    "surface-container-high": "#ffe1e8",
+                    "inverse-primary": "#ffb0ca",
+                    "on-error-container": "#93000a",
+                    "on-background": "#28171c",
+                    "primary-container": "#e10080",
+                    "tertiary-container": "#0075d6",
+                    "surface-bright": "#fff8f8",
+                    "on-primary-fixed-variant": "#8d004e",
+                    "on-tertiary-fixed-variant": "#004786",
+                    "surface-container-highest": "#fadbe3"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "sticker-padding": "12px",
+                    "gutter-collage": "16px",
+                    "margin-page": "40px",
+                    "stack-overlap": "-24px"
+            },
+            "fontFamily": {
+                    "headline-xl": ["Epilogue"],
+                    "button-text": ["Epilogue"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Epilogue"],
+                    "accent-label": ["Be Vietnam Pro"]
+            },
+            "fontSize": {
+                    "headline-xl": ["84px", {"lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "900"}],
+                    "button-text": ["18px", {"lineHeight": "18px", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "500"}],
+                    "headline-lg": ["48px", {"lineHeight": "44px", "fontWeight": "800"}],
+                    "accent-label": ["24px", {"lineHeight": "24px", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .hard-shadow { shadow: 8px 8px 0px #000000; }
+        .sticker-border { border: 4px solid white; box-shadow: 4px 4px 0px rgba(0,0,0,0.2); }
+        .tape-effect::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 20%;
+            width: 60px;
+            height: 25px;
+            background: rgba(255, 255, 255, 0.4);
+            transform: rotate(-5deg);
+            z-index: 10;
+        }
+        .tape-effect-bottom::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            right: 15%;
+            width: 50px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.3);
+            transform: rotate(3deg);
+            z-index: 10;
+        }
+        .scrapbook-card {
+            background-color: #fffef2; /* Pale paper yellow */
+            border: 2px solid #000;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .marquee {
+            white-space: nowrap;
+            overflow: hidden;
+            display: inline-block;
+            animation: marquee 20s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .tilt-left { transform: rotate(-2deg); }
+        .tilt-right { transform: rotate(3deg); }
+        .hover-sink:hover { transform: translate(4px, 4px); box-shadow: 2px 2px 0px #000 !important; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="sticky top-0 z-50 flex justify-between items-center w-full px-6 py-4 bg-white dark:bg-zinc-900 border-b-4 border-black dark:border-zinc-100 shadow-[4px_4px_0px_0px_#000000]">
+<div class="text-3xl font-black italic text-pink-600 dark:text-pink-400 drop-shadow-[2px_2px_0px_#000000] font-headline-xl uppercase" style="">MAHAKVERSE</div>
+<div class="hidden md:flex gap-8 items-center font-['Epilogue'] font-black uppercase tracking-widest">
+<a class="text-black dark:text-white bg-yellow-300 dark:bg-yellow-500 px-3 py-1 border-2 border-black -rotate-2" href="#" style="">About</a>
+<a class="text-zinc-800 dark:text-zinc-200 hover:rotate-1 transition-transform hover:bg-pink-100 dark:hover:bg-pink-900 hover:-translate-y-1" href="#" style="">Music</a>
+<a class="text-zinc-800 dark:text-zinc-200 hover:rotate-1 transition-transform hover:bg-pink-100 dark:hover:bg-pink-900 hover:-translate-y-1" href="#" style="">Archive</a>
+<a class="text-zinc-800 dark:text-zinc-200 hover:rotate-1 transition-transform hover:bg-pink-100 dark:hover:bg-pink-900 hover:-translate-y-1" href="#" style=""><br></a>
+</div>
+<button class="bg-primary-container text-on-primary-container border-4 border-black px-6 py-2 font-button-text hover-sink shadow-[6px_6px_0px_0px_#000000] transition-all" style="">ENTER PORTAL</button>
+</nav>
+<main class="max-w-[1400px] mx-auto px-4 md:px-margin-page pb-24">
+<!-- Hero Section -->
+<section class="relative pt-20 pb-32 flex flex-col items-center justify-center text-center">
+<!-- Decorative Stickers -->
+<div class="absolute top-10 left-10 tilt-left sticker-border bg-white p-2 z-10 hidden md:block">
+<img class="w-32 h-32 object-cover" data-alt="Close-up of vibrant pink tulips against a clean background, stylized as a scrapbook sticker" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDexNo359hkMZdqyAl-yWMtFLGWJvM8creWqeU1pThQoabH8t9ueTrT4mucwtfhQF6ozTZIdzetynu5sldQaPXvgkrNesUZ2QOw7MMxY6o53OINL99LRRDpJ730irKCDaZKBEhDnsH4a6AmXTNBRhX0rzZGRXQi6w5IYdFzh_wcU-lRc30CxhqJod4vrqd9g_A3jRlXPY818cQ8F-xJKR_PY6VO3nPjBehEtyBjPGm6I1KJscXR-eMFB9_fYiuqktGyfg-PQinxR-s" style="">
+</div>
+<div class="absolute bottom-20 right-20 tilt-right sticker-border bg-white p-2 z-10 hidden md:block">
+<img class="w-40 h-40 object-cover rounded-full" data-alt="Overhead view of a traditional ceramic cup of masala chai with steaming milk foam and spices around it" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFjk5JVXQPM9aq-ZsN60T2nlfh2D2KMbNcyTeq1-_cPSs6tVV_wQIHBxA9zkWPZDn4Fc5aZGgQgUZJrch7J9SLfDY0T7QifngIdotn8UtrM_17wskRG3HBK0PCnEMOHbHYMPhpXhwZ8Y4zO-CRSjPmZExe7HIwiPTHL6yW6Sr7gIJSKAXUEqkQRPs0u_IGs58F9-spr7Oezg1zwhTxxlqXuyjik-gAQVUBTkHS27c5TaPjmTCXo20B8gb9UEZYDYaTf_Lo1fD-AxM" style="">
+</div>
+<div class="relative inline-block mb-8">
+<h1 class="font-headline-xl text-headline-xl text-primary drop-shadow-[8px_8px_0px_#000000] relative z-20" style="">MAHAK RAWANI</h1>
+<div class="absolute -top-4 -right-4 bg-yellow-300 text-black px-4 py-1 border-2 border-black rotate-12 font-bold z-30" style="">02/03/2005</div>
+<div class="absolute -bottom-6 -left-6 bg-secondary-container text-on-secondary-container px-4 py-1 border-2 border-black -rotate-6 font-bold z-30" style="">रानी 👑</div>
+</div>
+<p class="font-headline-lg text-headline-lg text-on-surface mb-12 max-w-3xl leading-tight" style="">
+                Boss girl energy. <span class="bg-pink-200 px-2 italic" style="">Tulip heart.</span> <span class="underline decoration-yellow-400 decoration-8" style="">Chai soul.</span>
+</p>
+<button class="bg-primary-container text-on-primary-container px-12 py-6 text-2xl font-bold border-4 border-black shadow-[10px_10px_0px_0px_#000000] hover-sink flex items-center gap-4" style="">
+                ENTER MAHAKVERSE
+                <span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">bolt</span>
+</button>
+</section>
+<!-- Marquee -->
+<div class="bg-black text-white py-4 -mx-10 rotate-1 border-y-4 border-primary">
+<div class="marquee font-black uppercase text-2xl flex gap-12">
+<span class="" style="">STAY DRAMATIC</span> <span class="" style="">★</span> <span class="" style="">BOSS GIRL VIBES ONLY</span> <span class="" style="">★</span> <span class="" style="">TULIP POWER</span> <span class="" style="">★</span> <span class="" style="">CHAI IS THERAPY</span> <span class="" style="">★</span> <span class="" style="">STAY DRAMATIC</span> <span class="" style="">★</span> <span class="" style="">BOSS GIRL VIBES ONLY</span> <span class="" style="">★</span> <span class="" style="">TULIP POWER</span> <span class="" style="">★</span> <span class="" style="">CHAI IS THERAPY</span>
+</div>
+</div>
+<!-- About Her: Moodboard -->
+<section class="py-24 relative grid grid-cols-1 md:grid-cols-12 gap-gutter-collage">
+<div class="md:col-span-5 relative">
+<div class="scrapbook-card tape-effect p-8 border-4 border-black shadow-[12px_12px_0px_0px_#000000] tilt-left relative z-10">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6" style="">About Her</h2>
+<p class="text-xl mb-8 leading-relaxed font-body-md" style="">
+                        Mahak is the perfect blend of high-fashion corporate structure and chaotic desi energy. She's the kind of girl who leads the meeting then heads straight for spicy pani puri.
+                    </p>
+<div class="flex flex-wrap gap-3">
+<span class="bg-white border-2 border-black px-4 py-1 rounded-full tilt-right text-sm font-bold" style="">Sweet but savage</span>
+<span class="bg-primary-fixed border-2 border-black px-4 py-1 rounded-full tilt-left text-sm font-bold" style="">Corporate cutie</span>
+<span class="bg-yellow-200 border-2 border-black px-4 py-1 rounded-full tilt-right text-sm font-bold" style="">Chai paglu</span>
+<span class="bg-secondary-fixed border-2 border-black px-4 py-1 rounded-full tilt-left text-sm font-bold" style="">Spicy-food certified</span>
+<span class="bg-pink-300 border-2 border-black px-4 py-1 rounded-full tilt-right text-sm font-bold" style="">Tulip-coded</span>
+<span class="bg-tertiary-fixed border-2 border-black px-4 py-1 rounded-full tilt-left text-sm font-bold" style="">Soft heart, boss mode</span>
+<span class="bg-white border-2 border-black px-4 py-1 rounded-full tilt-right text-sm font-bold" style="">Main character behaviour</span>
+</div>
+</div>
+</div>
+<div class="md:col-span-7 grid grid-cols-2 gap-4 mt-12 md:mt-0 relative">
+<img class="sticker-border rotate-3 shadow-lg z-0 w-full h-64 object-cover" data-alt="Collage of colorful dried flowers and handwritten notes on vintage paper" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBC1RGWFEsJckS4EocFUAVOpbTv3OnwVukC4Sv_35hTC2iZiVGp8oKSSadHUK9JTWnj35iuaQlnWCJX-toJLRjZlD1m61IkDcXeQBqcQINnIx3tWEs1gB6Q8I7fOLY9Sa-HW9T_DgPKSVY05i-2qz9Bex3aDpDSQR-M6AfEqzL72P2cDPp9k3EhoE7X_AF0OjK-gGZCYfAjM5mCEni_itR5A_mfCZIxKSodpmJaG9EhqK9C8wOw-b8PChn4h4XCBua1TFk7ysc4yxU" style="">
+<img class="sticker-border -rotate-6 shadow-xl z-20 w-full h-64 object-cover mt-8" data-alt="Modern aesthetic office space with pink accents and creative moodboard on the wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAFBMcmgTebIh-4f-loNpVZvBxfanY682o5Ii6BQRAEs0iL5tHaWs_9xKxHi09WKnosVi8vGXAlD4dBHomuwYDsrWxQjeuUCxtt2uE1vHfbHk4RZ2ZskPq_Cxj4vvE60awmrb78YQGASmNjlTENW3MQNau3QY4uPsbLP3rSUWNJADddlMozXE6SdZjm4ANBp9tkOcmsK9AG0l_swfYbo0lJ2D_5jsWYuXilxPuvvFPwQ4hD4KweuEIuwCDXXlAv3wqfUwse0RXQus" style="">
+<div class="absolute -bottom-10 right-0 z-30">
+<div class="bg-primary text-white p-6 border-4 border-black rotate-12 shadow-[8px_8px_0px_#000000]">
+<span class="material-symbols-outlined text-4xl" data-icon="auto_awesome" style="">auto_awesome</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Favorites Grid -->
+<section class="py-20">
+<h2 class="font-headline-xl text-headline-xl text-center mb-16 underline decoration-pink-500 decoration-8" style="">FAVORITES</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+<!-- Tulip Card -->
+<div class="scrapbook-card p-4 border-4 border-black shadow-[8px_8px_0px_#000000] tilt-right flex flex-col items-center">
+<img class="w-full h-48 object-cover border-2 border-black mb-4" data-alt="A bunch of fresh pink and white tulips in a vase with soft morning sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgxFMQqzwtEBE9r8rofl-Qt4GQj6z8LKmLo3XlqsBFtCMCel9c3M-fGMD8fF7amb6QDq4M0e3P4FGgr8EGvGe0MpuM5_0SNimXpyIVZun_jul7PZU_40wTtAG9ByyFKAv2Phiqto4WrQf9nznz3H0MqyCQpTdxhlKtcx5wbSxgS7dx8szv42QwJTdQkqPC9t_CVsTRI8ww5YKeRRb8YYKcFOu9-c2Hzu2tSvT1rz-00I3L6RJJIDqblvWyQCdWrtQiYcX_DsW0Dus" style="">
+<h3 class="font-bold text-xl uppercase italic" style="">Tulips</h3>
+<p class="text-sm opacity-70" style="">Always blooming.</p>
+</div>
+<!-- Chai Card -->
+<div class="scrapbook-card p-4 border-4 border-black shadow-[8px_8px_0px_#000000] tilt-left flex flex-col items-center mt-stack-overlap">
+<div class="w-full h-48 bg-yellow-100 flex items-center justify-center border-2 border-black mb-4 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Steaming cup of masala chai being poured with cardamom and cinnamon sticks next to it" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKNpW3KZq_cs3_yAH6xwOrqnSeoKKFfS5LaQG9Bxk4gy-dUqOrtk9e7qZWTdygAWyHZth8iHbiTTDSCngdNyy0_3qGHh47jhU9JvJupmrPIJeXOoZi-KWhllLfZFbjBcWQjRRhmvG75O6fFIXxGY8JZPclMwuCt64rUAbFhin72e2sD36AQfqBUuxYUOZnZnxr3yF7T7z--sSC9-jqrzQQj0Xr0b44Gl7aK2c-_hiCq7Py67LBq3MdPTZzzXsQB01iBzeChj1kTN0" style="">
+</div>
+<h3 class="font-bold text-xl uppercase italic" style="">Chai</h3>
+<p class="text-sm opacity-70" style="">Essential fuel.</p>
+</div>
+<!-- Colors Card -->
+<div class="scrapbook-card p-4 border-4 border-black shadow-[8px_8px_0px_#000000] tilt-right flex flex-col items-center">
+<div class="grid grid-cols-3 w-full h-48 border-2 border-black mb-4">
+<div class="bg-secondary"></div>
+<div class="bg-on-secondary-container"></div>
+<div class="bg-primary"></div>
+</div>
+<h3 class="font-bold text-xl uppercase italic" style="">Palette</h3>
+<p class="text-sm opacity-70" style="">Blue. Green. Pink.</p>
+</div>
+<!-- Spicy Card -->
+<div class="scrapbook-card p-4 border-4 border-black shadow-[8px_8px_0px_#000000] tilt-left mt-8">
+<img class="w-full h-48 object-cover border-2 border-black mb-4" data-alt="A plate of spicy red chili peppers and traditional spicy Indian street food snacks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYm05yEjd_ZfXm_Ahy_P3HsgnZpEj_Ffc7xPhPQlNqvtrVqEcTu6FFw9nRjjcMc06HPCGw9DSQffIXkXJLYyKBc0t-3GY6n-zkAn1xCzDsk0wNx3XKLb90N_kdqpcDx4apHgoOCofA2XBlWjF0NZ4PtIUJKxYeFRY64aaVX1-lab48wkomoOhU0dgyS0S13k6Bg-svq1_1h1YE3uFKxljYWcydEC4Pekx-EpmxhUMI1e5EtaDTLdX2Xl3niLGX4eBSl2Pfp8jNuA0" style="">
+<h3 class="font-bold text-xl uppercase italic text-center" style="">Spicy Food</h3>
+<p class="text-sm opacity-70 text-center" style="">Certified heat.</p>
+</div>
+</div>
+</section>
+<!-- Music Wall -->
+<section class="py-24 overflow-hidden">
+<div class="flex items-center gap-6 mb-12">
+<h2 class="font-headline-xl text-headline-xl text-primary whitespace-nowrap" style="">MUSIC WALL</h2>
+<div class="h-4 w-full bg-black"></div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+<!-- Cassette 1 -->
+<div class="group relative scrapbook-card p-4 border-4 border-black shadow-[6px_6px_0px_#000000] hover-sink tilt-left cursor-pointer overflow-hidden">
+<div class="bg-black text-white px-2 py-1 absolute top-2 right-2 text-[10px] font-bold" style="">SIDE A</div>
+<div class="w-full h-32 bg-zinc-800 rounded mb-4 flex items-center justify-center p-2">
+<div class="w-full h-full border-2 border-zinc-600 rounded flex flex-col items-center justify-center gap-2">
+<div class="flex gap-4">
+<div class="w-8 h-8 rounded-full border-2 border-zinc-600"></div>
+<div class="w-8 h-8 rounded-full border-2 border-zinc-600"></div>
+</div>
+<div class="w-20 h-2 bg-zinc-600 rounded"></div>
+</div>
+</div>
+<div class="font-bold text-center text-on-surface uppercase" style="">DARKHAAST</div>
+</div>
+<!-- Cassette 2 -->
+<div class="group relative scrapbook-card p-4 border-4 border-black shadow-[6px_6px_0px_#000000] hover-sink tilt-right cursor-pointer overflow-hidden lg:mt-8">
+<div class="bg-pink-600 text-white px-2 py-1 absolute top-2 right-2 text-[10px] font-bold" style="">SIDE B</div>
+<div class="w-full h-32 bg-pink-100 rounded mb-4 flex items-center justify-center p-2">
+<div class="w-full h-full border-2 border-pink-300 rounded flex flex-col items-center justify-center gap-2">
+<div class="flex gap-4">
+<div class="w-8 h-8 rounded-full border-2 border-pink-300"></div>
+<div class="w-8 h-8 rounded-full border-2 border-pink-300"></div>
+</div>
+<div class="w-20 h-2 bg-pink-300 rounded"></div>
+</div>
+</div>
+<div class="font-bold text-center text-on-surface uppercase" style="">Madira</div>
+</div>
+<!-- Cassette 3 -->
+<div class="group relative scrapbook-card p-4 border-4 border-black shadow-[6px_6px_0px_#000000] hover-sink -rotate-1 cursor-pointer overflow-hidden mt-4">
+<div class="w-full h-32 bg-secondary-container rounded mb-4 flex items-center justify-center p-2">
+<div class="w-full h-full border-2 border-on-secondary-container/30 rounded flex flex-col items-center justify-center gap-2">
+<div class="flex gap-4">
+<div class="w-8 h-8 rounded-full border-2 border-on-secondary-container/30"></div>
+<div class="w-8 h-8 rounded-full border-2 border-on-secondary-container/30"></div>
+</div>
+<div class="w-20 h-2 bg-on-secondary-container/30 rounded"></div>
+</div>
+</div>
+<div class="font-bold text-center text-on-surface uppercase" style="">Bure Din</div>
+</div>
+<!-- Songs (shuffled) -->
+<div class="group relative scrapbook-card p-4 border-4 border-black shadow-[6px_6px_0px_#000000] hover-sink rotate-2 cursor-pointer overflow-hidden">
+<div class="w-full h-32 bg-yellow-200 rounded mb-4"></div>
+<div class="font-bold text-center text-on-surface uppercase" style="">Raat Akeli Thi</div>
+</div>
+<div class="group relative scrapbook-card p-4 border-4 border-black shadow-[6px_6px_0px_#000000] hover-sink tilt-left cursor-pointer overflow-hidden mt-12">
+<div class="w-full h-32 bg-primary-container rounded mb-4"></div>
+<div class="font-bold text-center text-on-surface uppercase" style="">Teri Yaad</div>
+</div>
+<div class="group relative scrapbook-card p-4 border-4 border-black shadow-[6px_6px_0px_#000000] hover-sink -rotate-6 cursor-pointer overflow-hidden">
+<div class="w-full h-32 bg-tertiary-container rounded mb-4"></div>
+<div class="font-bold text-center text-on-surface uppercase" style="">Haule Haule</div>
+</div>
+<div class="group relative scrapbook-card p-4 border-4 border-black shadow-[6px_6px_0px_#000000] hover-sink tilt-right cursor-pointer overflow-hidden mt-4">
+<div class="font-bold text-center text-on-surface uppercase mb-4" style="">Khat</div>
+<div class="w-full h-32 bg-orange-200 rounded"></div>
+</div>
+<div class="group relative scrapbook-card p-4 border-4 border-black shadow-[6px_6px_0px_#000000] hover-sink rotate-12 cursor-pointer overflow-hidden mt-[-20px] lg:mt-0">
+<div class="font-bold text-center text-on-surface uppercase mb-4" style="">CHHAD DILA</div>
+<div class="w-full h-32 bg-teal-200 rounded"></div>
+</div>
+<div class="group relative scrapbook-card p-4 border-4 border-black shadow-[6px_6px_0px_#000000] hover-sink -rotate-2 cursor-pointer overflow-hidden">
+<div class="w-full h-32 bg-indigo-200 rounded mb-4"></div>
+<div class="font-bold text-center text-on-surface uppercase" style="">Total</div>
+</div>
+<div class="group relative scrapbook-card p-4 border-4 border-black shadow-[6px_6px_0px_#000000] hover-sink tilt-left cursor-pointer overflow-hidden lg:mt-16">
+<div class="w-full h-32 bg-pink-300 rounded mb-4"></div>
+<div class="font-bold text-center text-on-surface uppercase" style="">Meherbaan</div>
+</div>
+<div class="group relative scrapbook-card p-4 border-4 border-black shadow-[6px_6px_0px_#000000] hover-sink rotate-3 cursor-pointer overflow-hidden">
+<div class="w-full h-32 bg-blue-300 rounded mb-4"></div>
+<div class="font-bold text-center text-on-surface uppercase" style="">Darmiyaan</div>
+</div>
+<div class="group relative scrapbook-card p-4 border-4 border-black shadow-[6px_6px_0px_#000000] hover-sink tilt-right cursor-pointer overflow-hidden lg:mt-[-40px]">
+<div class="w-full h-32 bg-red-400 rounded mb-4"></div>
+<div class="font-bold text-center text-on-surface uppercase" style="">Paaro</div>
+</div>
+</div>
+</section>
+<!-- Jukebox Widget (Floating style in section) -->
+<section class="py-20 flex justify-center">
+<div class="bg-primary text-white border-8 border-black p-8 shadow-[15px_15px_0px_#000000] max-w-md w-full relative">
+<!-- Stickers on Jukebox -->
+<div class="absolute -top-6 -right-6 bg-white text-primary rounded-full p-3 border-4 border-black rotate-12">
+<span class="material-symbols-outlined text-4xl" data-icon="music_note" style="">music_note</span>
+</div>
+<div class="absolute -bottom-4 -left-10 bg-yellow-300 text-black px-3 py-1 border-4 border-black -rotate-12 font-black" style="">RETRO VIBES</div>
+<div class="text-center mb-8">
+<div class="text-xs font-bold tracking-[0.2em] mb-2" style="">NOW PLAYING</div>
+<div class="text-2xl font-black italic" style="">DARKHAAST</div>
+</div>
+<!-- Animated Visualizer Sim -->
+<div class="flex items-end justify-center gap-1 h-12 mb-8">
+<div class="w-2 bg-white/30 h-8"></div>
+<div class="w-2 bg-white/60 h-12"></div>
+<div class="w-2 bg-white h-6"></div>
+<div class="w-2 bg-white/80 h-10"></div>
+<div class="w-2 bg-white/40 h-8"></div>
+<div class="w-2 bg-white h-12"></div>
+<div class="w-2 bg-white/70 h-5"></div>
+</div>
+<div class="flex items-center justify-between gap-4">
+<button class="bg-black/20 p-2 hover:bg-black/40" style=""><span class="material-symbols-outlined" data-icon="shuffle" style="">shuffle</span></button>
+<div class="flex items-center gap-6">
+<button class="hover:scale-110 transition-transform" style=""><span class="material-symbols-outlined text-3xl" data-icon="skip_previous" style="">skip_previous</span></button>
+<button class="bg-white text-primary w-16 h-16 rounded-full flex items-center justify-center border-4 border-black shadow-[4px_4px_0px_#000000] hover:scale-105 active:translate-y-1" style="">
+<span class="material-symbols-outlined text-4xl" data-icon="play_arrow" style="font-variation-settings: &quot;FILL&quot; 1;">play_arrow</span>
+</button>
+<button class="hover:scale-110 transition-transform" style=""><span class="material-symbols-outlined text-3xl" data-icon="skip_next" style="">skip_next</span></button>
+</div>
+<button class="bg-black/20 p-2 hover:bg-black/40" style=""><span class="material-symbols-outlined" data-icon="repeat" style="">repeat</span></button>
+</div>
+</div>
+</section>
+<!-- Mahak Moodboard (Chaos but Pretty) -->
+<section class="py-24 relative min-h-[600px]">
+<h2 class="font-headline-lg text-headline-lg text-center mb-20" style="">MAHAK MOODBOARD</h2>
+<!-- Floating Word Elements -->
+<div class="absolute top-[20%] left-[5%] bg-pink-100 border-2 border-black px-6 py-2 rotate-6 font-bold text-2xl shadow-md" style="">tulips</div>
+<div class="absolute top-[40%] right-[10%] bg-white border-4 border-primary px-8 py-3 -rotate-3 font-black text-4xl text-primary shadow-xl" style="">chai</div>
+<div class="absolute bottom-[20%] left-[15%] bg-black text-white px-6 py-2 rotate-12 font-bold text-xl" style="">boss girl aura</div>
+<div class="absolute top-[10%] right-[25%] bg-yellow-200 border-2 border-black px-4 py-1 -rotate-6 font-medium text-lg italic" style="">sweet side</div>
+<div class="absolute bottom-[40%] right-[20%] bg-secondary-container text-on-secondary-container px-6 py-2 rotate-2 font-bold text-2xl" style="">corporate but cute</div>
+<div class="absolute top-[60%] left-[30%] bg-on-tertiary-container border-2 border-black px-10 py-4 -rotate-12 font-black text-3xl underline" style="">chaos but pretty</div>
+<!-- Central Collage Element -->
+<div class="mx-auto max-w-xl relative">
+<img class="w-full sticker-border rotate-2" data-alt="Aesthetic layout of film photography, washi tape, and pressed flowers on a marble surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAC7aWV0K7L7mpYyuuTiZlbq7b-xtBcIQ-_4IzyNHwtcj46tbOgixdlVYcFfV-VfAPETnNzqAxGlQsMz0AKOiLzBxVUI9BNZPIoyTLaVBMmCwLBU-ighp7HSBFNt9ylhPW8ygWFktmCpGs-jANBK1sSvC9R5vOudCtvcXjSSc8JH6axjIfTPgzJfQF4QDkIXJiuVY5C0lTj1lbh4vO88mha9_Bix4MLFDSkU6j5qosJhzG6cqGJKX6HyhpYhlYCFOoMcc9vDu713uM" style="">
+<div class="absolute -top-10 -left-10 w-32 h-32 bg-primary rotate-12 flex items-center justify-center border-4 border-black">
+<span class="text-white font-black text-5xl" style="">M</span>
+</div>
+</div>
+</section>
+<!-- Closing Note -->
+<section class="py-32 text-center">
+<div class="max-w-2xl mx-auto scrapbook-card border-8 border-dashed border-primary p-12 tilt-left shadow-2xl relative">
+<div class="absolute -top-10 left-1/2 -translate-x-1/2 bg-white px-4 border-2 border-black">
+<span class="material-symbols-outlined text-pink-500 text-5xl" data-icon="favorite" style="font-variation-settings: &quot;FILL&quot; 1;">favorite</span>
+</div>
+<p class="font-headline-lg text-4xl leading-snug text-on-background italic" style="">
+                    "This page is just proof that your vibe is way too cool to fit inside normal words."
+                </p>
+<div class="mt-12 flex justify-center gap-4">
+<span class="bg-yellow-300 px-4 py-1 border-2 border-black rotate-6 font-bold" style="">XOXO</span>
+<span class="bg-pink-400 text-white px-4 py-1 border-2 border-black -rotate-3 font-bold" style="">Mahakverse Team</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-16 px-8 flex flex-col md:flex-row justify-between items-center gap-6 bg-pink-600 dark:bg-pink-900 border-t-8 border-black dark:border-white">
+<div class="text-xl font-black text-white font-headline-xl uppercase" style="">MAHAKVERSE</div>
+<div class="flex flex-wrap justify-center gap-8 font-['Epilogue'] font-bold text-sm uppercase text-white">
+<a class="hover:text-yellow-300 hover:scale-105 transition-all" href="#" style="">insta</a>
+<a class="hover:text-yellow-300 hover:scale-105 transition-all" href="#" style="">Spotify</a>
+<a class="underline decoration-yellow-300 decoration-4" href="#" style=""><br></a>
+<a class="hover:text-yellow-300 hover:scale-105 transition-all" href="#" style=""><br></a>
+</div>
+<div class="text-center md:text-right font-['Epilogue'] font-bold text-sm uppercase text-white/80 max-w-xs" style="">
+            © 2026 MAHAKVERSE. STAY DRAMATIC. MADE WITH CHAI AND CHAOS.
+        </div>
+</footer>
+<!-- FAB for Top of Page (Sticker style) -->
+<button class="fixed bottom-8 right-8 z-[60] bg-yellow-300 border-4 border-black p-4 shadow-[5px_5px_0px_#000000] hover-sink rotate-12 group" style="">
+<span class="material-symbols-outlined text-black text-3xl group-hover:rotate-12 transition-transform" data-icon="arrow_upward" style="">arrow_upward</span>
+</button>
+</body></html>
