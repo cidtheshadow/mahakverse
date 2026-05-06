@@ -1,7 +1,7 @@
 export const Marquee = () => {
   const items = [
-    "STAY DRAMATIC", "★", "BOSS GIRL VIBES ONLY", "★", 
-    "TULIP POWER", "★", "CHAI IS THERAPY", "★"
+    "STAY DRAMATIC", "★", "GOOD VIBES ONLY", "★",
+    "COFFEE POWER", "★", "MUSIC THERAPY", "★"
   ];
 
   return (
